@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StockSim</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+  <h1>StockSim</h1>
+  <p>Simulated stock trading for students — Learning only</p>
+</header>
+
+<div class="auth">
+  <h2>Sign Up / Login</h2>
+  <input type="text" id="username" placeholder="Your Name">
+  <input type="email" id="email" placeholder="Email">
+  <input type="password" id="password" placeholder="Password">
+  <select id="plan">
+    <option value="free">Free Plan</option>
+    <option value="premium">Premium Plan</option>
+  </select>
+  <button onclick="signup()">Sign Up</button>
+  <button onclick="login()">Login</button>
+  <p id="authMsg"></p>
+</div>
+
+<div class="dashboard" style="display:none;">
+  <h2>Welcome, <span id="userDisplay"></span></h2>
+  <p>Virtual Balance: $<span id="balance"></span></p>
+
+  <h3>Buy / Sell Stocks</h3>
+  <select id="stockSelect"></select>
+  <input type="number" id="shares" placeholder="Shares">
+  <button onclick="trade('buy')">Buy</button>
+  <button onclick="trade('sell')">Sell</button>
+
+  <h3>Portfolio</h3>
+  <table id="portfolioTable">
+    <tr><th>Stock</th><th>Shares</th><th>Value</th></tr>
+  </table>
+
+  <h3>Portfolio Growth</h3>
+  <canvas id="portfolioChart" height="200"></canvas>
+
+  <h3>Company Research</h3>
+  <div id="researchSection"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
