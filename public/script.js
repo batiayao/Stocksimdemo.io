@@ -1,7 +1,7 @@
 let currentUser = null;
 let portfolioHistory = [];
 let stockPrices = {};
-const API_KEY = 'YOUR_FMP_API_KEY'; // <-- replace with your API key
+const API_KEY = '5VpxZizgnYF1S9Fqj1ga5mQOd357Waw1; 
 const stockSymbols = ['AAPL','TSLA','GOOG','AMZN','MSFT'];
 
 // Fetch live stock prices
