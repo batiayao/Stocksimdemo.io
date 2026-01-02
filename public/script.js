@@ -111,3 +111,4 @@ function updatePortfolio(){
     options:{responsive:true}
   });
 }
+window.location.href = "/dashboard.html";
